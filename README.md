@@ -66,3 +66,17 @@ Zuul service is discoverable by Discovery service and if multiple instances of a
 ![Zuul employee service](zuul-employee.png)
 
 ![Zuul library service](zuul-library.png)
+
+# References
+
+[Install Spring Boot CLI](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-installing-the-cli)
+
+[Using Spring Boot CLI](https://docs.spring.io/spring-boot/docs/current/reference/html/cli-using-the-cli.html)
+ 
+[Spring Cloud Project](http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html)
+ 
+[Building a micro-service federation slideshare](http://www.slideshare.net/SpringCentral/building-a-microservice-federation-with-grails)
+ 
+[Microservices with Spring Blog](https://spring.io/blog/2015/07/14/microservices-with-spring)
+
+[Building microservices with Spring Cloud and Netflix OSS Blog](http://callistaenterprise.se/blogg/teknik/2015/04/10/building-microservices-with-spring-cloud-and-netflix-oss-part-1/)
