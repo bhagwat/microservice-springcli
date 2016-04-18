@@ -1,0 +1,9 @@
+spring:
+  application:
+     name: library-service
+server:
+  port: 3333
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:1111}/eureka/
