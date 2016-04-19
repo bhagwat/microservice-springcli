@@ -5,23 +5,25 @@ buildscript {
     repositories {
         mavenLocal()
         maven { url "https://repo.grails.org/grails/core" }
+        maven { url "http://repo.spring.io/milestone" }
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.5.0"
         classpath "org.grails.plugins:hibernate4:5.0.2"
+        classpath "io.spring.gradle:dependency-management-plugin:0.5.6.RELEASE"
     }
 }
 
 version "0.1"
 group "auth.server"
 
-apply plugin:"eclipse"
-apply plugin:"idea"
-apply plugin:"war"
-apply plugin:"org.grails.grails-web"
-apply plugin:"org.grails.grails-gsp"
-apply plugin:"asset-pipeline"
+apply plugin: "eclipse"
+apply plugin: "idea"
+apply plugin: "war"
+apply plugin: "org.grails.grails-web"
+apply plugin: "org.grails.grails-gsp"
+apply plugin: "asset-pipeline"
 
 ext {
     grailsVersion = project.grailsVersion
@@ -36,6 +38,7 @@ repositories {
 dependencyManagement {
     imports {
         mavenBom "org.grails:grails-bom:$grailsVersion"
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Brixton.RC1'
     }
     applyMavenExclusions false
 }
@@ -63,6 +66,9 @@ dependencies {
 
     compile 'org.grails.plugins:spring-security-core:3.0.4'
     compile 'org.grails.plugins:spring-security-oauth2-provider:3.0.0-RC1'
+
+    compile "org.springframework.cloud:spring-cloud-starter-config"
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka'
 }
 
 task wrapper(type: Wrapper) {

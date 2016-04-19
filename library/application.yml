@@ -1,12 +1,8 @@
 spring:
   application:
-    name: employee-service
+     name: library-service
 server:
-  port: 2222
-#logging:
-#  level:
-#    org.springframework.security: DEBUG
-#    org.springframework.web: DEBUG
+  port: 3333
 security:
   sessions: NEVER
   oauth2:

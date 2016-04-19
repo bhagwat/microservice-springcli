@@ -6,4 +6,4 @@ curl -X POST \
      -d "grant_type=password" \
 	 -d username=bhagwat.kumar@tothenew.com \
 	 -d password=123456	\
-     -d "scope=read" http://localhost:8080/oauth/token
+     -d "scope=read" http://localhost:9999/oauth/token
