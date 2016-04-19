@@ -1,8 +1,11 @@
+server:
+  port: 8888
 spring:
   application:
     name: zuul-server
-server:
-  port: 8888
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:8080/user
 eureka:
   client:
     serviceUrl:
@@ -15,3 +18,7 @@ zuul:
     library:
       path: /lib/**
       service-id: library-service
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: INFO

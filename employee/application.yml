@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: employee-service
+server:
+  port: 2222
+#logging:
+#  level:
+#    org.springframework.security: DEBUG
+#    org.springframework.web: DEBUG
+security:
+  sessions: NEVER
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:8080/oauth/token
+      userAuthorizationUri: http://localhost:8080/oauth/authorize
+      clientId: my-client
+      clientSecret: my-client-secret
+    resource:
+      userInfoUri: http://localhost:8080/user
