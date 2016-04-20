@@ -39,9 +39,30 @@ class LibraryController {
         ).getBody()
         return employees[employeeId - 1]
     }
+
+    @Autowired
+    LibraryService libraryService
+
+    @RequestMapping("/book")
+    List<Book> getBooks(){libraryService.getBooks()}
+
+    @RequestMapping("/book/{bookId}")
+    Book getBook(@PathVariable Integer bookId){libraryService.getBooks()[bookId-1]}
 }
 
 class Employee {
     String name;
     Integer age
+}
+
+class Book {
+    String name;
+    String author
+}
+
+@Component
+class LibraryService{
+    public List<Book>getBooks(){
+        (1..10).collect{new Book(name: "Book "+it, author: "Author "+it)}
+    }
 }
